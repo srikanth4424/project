@@ -1,0 +1,32 @@
+<!-- <ng-image-slider [images]="imageObject" #nav></ng-image-slider>
+
+imageObject: Array<object> = [{
+    image: 'C:\Users\srikanth R\Pictures\392560',
+    thumbImage: 'C:\Users\srikanth R\Pictures\392560',
+     alt: 'alt of image', 
+    title: 'title of image'
+}, {
+    image: 'C:\Users\srikanth R\Pictures\35845', // Support base64 image
+    thumbImage: 'C:\Users\srikanth R\Pictures\35845', // Support base64 image
+    title: 'Image title'
+     alt: 'Image alt' 
+}
+]; -->
+
+<div class="writing">
+    
+    <h1 class=text-center>@bliss</h1>
+    <h3>
+    <p class=text-center>Your daily dose of happiness, unfiltered</p>
+    </h3>
+</div>
+
+<div style="width: 1260px; height: 370px; text-align:justify;margin:0; padding:0px;">
+    <ng-image-slider #nav
+      [images]="imageObject"
+      [infinite]="false"
+      [autoSlide]="6"
+      [imageSize]="{width: '25%', height: 200}"
+      slideImage="1"></ng-image-slider> 
+</div>
+

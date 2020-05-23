@@ -1,0 +1,39 @@
+<ngb-carousel
+[showNavigationIndicators]="true"
+>
+   <ng-template ngbSlide id="firstSlide">
+     <div class="picsum-img-wrapper">
+        <!-- <img src="https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/4.jpg" alt="Angular Carousel 1"> -->
+        <img src="https://td-luxe.com/wp-content/uploads/2020/04/Ext1-2.jpg" alt="Angular Carousel 1">
+      </div>
+       <div class="carousel-caption">
+        <h3>Veda T</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide id="secondSlide">
+      <div class="picsum-img-wrapper">
+        <img src="https://td-luxe.com/wp-content/uploads/2020/04/Ext1-2.jpg" alt="Angular Carousel 1">
+      </div>
+      <div class="carousel-caption">
+        <h3>Title Goes Here</h3>
+        <p>Consectetur tortor volutpat pretium.</p>
+      </div>
+    </ng-template>
+    <ng-template ngbSlide id="thirdSlide">
+      <div class="picsum-img-wrapper">
+        <img src=" https://sanjayv.github.io/ng-image-slider/contents/assets/img/slider/5.jpg" alt="Angular Carousel 1">
+      </div>
+      <div class="carousel-caption">
+        <h3>Title Goes Here</h3>
+        <p>Consectetur tortor volutpat pretium.</p>
+      </div>
+    </ng-template>
+  </ngb-carousel>
+ 
+  <div class="text-center">
+    <button (click)="navigateToSlide('four')">Go to Slide Four</button>
+    <button (click)="getToPrev()">Prev</button>
+    <button (click)="goToNext()">Next</button>
+    <button (click)="stopCarousel()">Pause</button>
+  </div> 
