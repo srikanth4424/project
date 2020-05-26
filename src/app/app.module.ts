@@ -51,6 +51,7 @@ import { ProductsComponent } from './products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GalleryComponent } from './gallery/gallery.component'
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { VSComponent } from './vs/vs.component';
 @NgModule({
     imports: [
         BrowserModule,
@@ -68,7 +69,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
         AlertComponent,
         HomeComponent,
         ProductsComponent,
-        GalleryComponent    ],
+        GalleryComponent,
+        VSComponent    ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },

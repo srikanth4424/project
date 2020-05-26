@@ -1,55 +1,131 @@
-<!-- <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="//netdna.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-  </head> -->
-  <!-- <body> -->
-   <!-- <div class="topnav" *ngIf="user">
-      <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Bliss</a>
-      <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Users</a>
-      <a class="nav-item nav-link" routerLink="/products" routerLinkActive="active">Products</a>
-      <a class="nav-item nav-link" routerLink="/gallery" routerLinkActive="active">Gallery</a>
-      <a class="nav-item nav-link" (click)="logout()">Logout</a>
-  </div> -->
-  <!-- </body> -->
 <!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark cyan" [containerInside]="false" *ngIf="user">
+<!-- <nav class="navbar flex-lg-column navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand " href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+          <li class="nav-item active">
+              <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/products">Features</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+      </ul>
+  </div>
+</nav> -->
+<nav class="navbar flex-lg-column navbar-expand-md navbar-dark bg-primary main-nav" *ngIf="user">
+  <a class="navbar-brand d-md-none d-inline" href="/home">
+    <p class="font-weight-bolder h2">Bliss</p>
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="container" id="collapsingNavbar">
+      <ul class="navbar-nav  text-center">
+          <li class="nav-item active">
+            <a href="/gallery" class="nav-link d-flex flex-column ">
+              <span class="material-icons">
+                search
+                </span>  
+                <span class="d-none d-sm-inline">Search</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link d-flex flex-column" href="#myAlert">
+                <span class="material-icons">
+                  room
+                  </span>
+                <span class="d-none d-sm-inline">Find-us</span>
+              </a>
+          </li>
+        </ul>
+       <ul class="navbar-nav mx-auto navbar-logo"> 
+           <li class="nav-item active"> 
+            <a class="navbar-brand " href="/home">
+              <p class="font-weight-bolder h2">Bliss</p>
+          </a>
+           </li>
+           </ul>
+           
+      <ul class="navbar-nav text-center">
+          <li class="nav-item active">
+              <a class="nav-link d-flex flex-column" href="/user" >
+                <span class="material-icons">
+                  verified_user
+                  </span>
+                <span class="d-none d-sm-inline">Users</span>
+              </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link d-flex flex-column" (click)="logout()">
+              <span class="material-icons">
+                pan_tool
+                </span>
+              <span class="d-none d-sm-inline">Logout</span>
+            </a>
+        </li>
+      </ul>
+  </div>
+  <div class="container mx-auto" >
+      <ul class="navbar-nav mx-auto flex-row">
+        
+        <li class="nav-item active">
+            <a class="nav-link" href="/home"><p class="font-weight-bolder">HOME</p></a>
+          </li>
+          <p class="navbar-text active font-weight-bolder"> / </p>
 
-  <!-- Navbar brand -->
-  <mdb-navbar-brand><a class="navbar-brand navbar-nav ml-auto nav-flex-icons d-md-flex align-items-center" href="/home">Bliss</a></mdb-navbar-brand>
-  <!-- <ul class="navbar-nav ml-auto nav-flex-icons d-md-flex align-items-center"></ul> -->
-  <!-- Collapsible content -->
-  <links>
+          <li class="nav-item active">
+            <a class="nav-link" href="/VS"><p class="font-weight-bolder">VS</p></a>
+          </li>
+          <p class="navbar-text active font-weight-bolder"> / </p>
 
-    <!-- Links -->
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item active">
-        <a class="nav-link waves-light" mdbWavesEffect href="/gallery"><mdb-icon fas icon="image"></mdb-icon> Gallery<span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect href="/products"><mdb-icon fas icon="cubes"></mdb-icon> Products</a>
-      </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="/products"><p class="font-weight-bolder">PRODUCTS</p></a>
+        </li>
+        <p class="navbar-text active font-weight-bolder "> / </p>
 
-      <!-- Dropdown -->
-      <li class="nav-item dropdown" dropdown>
-        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
-          <mdb-icon fas icon="user"></mdb-icon> Profile<span class="caret"></span></a>
-        <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-light" mdbWavesEffect href="/users">My account</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect (click)="logout()">Log out</a>
-        </div>
-      </li>
-
+        <li class="nav-item active">
+            <a class="nav-link" href="/gallery"><p class="font-weight-bolder">GALLERY</p></a>
+        </li>
+        <p class="navbar-text active font-weight-bolder "> / </p>
+        <li class="nav-item active">
+            <a class="nav-link" href="/users"><p class="font-weight-bolder">USERS</p></a>
+        </li>
     </ul>
-    <!-- Links -->
-  </links>
-  <!-- Collapsible content -->
+    </div>   
+</nav>
 
-</mdb-navbar>
-<!--/.Navbar-->
+<!-- <nav class="navbar flex-lg-column navbar-dark bg-primary main-nav">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+  </button>
+  <div class="container" id="navbarNav">
+      <ul class="navbar-nav flex-row mx-auto">
+          <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+      </ul>
+  </div>
+</nav> -->
+<!--  end navbar -->
   <div class="app-container" [ngClass]="{ 'bg-light': user }">
     <alert></alert>
     <router-outlet></router-outlet>
 </div>
+

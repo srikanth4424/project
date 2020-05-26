@@ -17,6 +17,7 @@ import { HomeComponent } from './home';
 import { AuthGuard } from './_helpers'; 
 import { ProductsComponent } from './products/products.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { VSComponent } from './vs/vs.component';
 const accountModule = () => import('./account/account.module').then(x => x.AccountModule);
 const usersModule = () => import('./users/users.module').then(x => x.UsersModule);
 
@@ -26,6 +27,7 @@ const routes: Routes = [
     { path: 'account', loadChildren: accountModule },
     { path: 'products', component: ProductsComponent, canActivate: [AuthGuard] },
     { path: 'gallery', component: GalleryComponent, canActivate: [AuthGuard] },
+    { path: 'VS', component: VSComponent, canActivate: [AuthGuard] },
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
