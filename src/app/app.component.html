@@ -21,7 +21,9 @@
       </ul>
   </div>
 </nav> -->
-<nav class="navbar flex-lg-column navbar-expand-md navbar-dark bg-primary main-nav" *ngIf="user">
+<!-- <nav class="navbar navbar-default navbar-fixed-top"></nav> -->
+<nav class="navbar navbar-fixed-top flex-lg-column  navbar-expand-md navbar-dark bg-primary main-nav" *ngIf="user">
+  
   <a class="navbar-brand d-md-none d-inline" href="/home">
     <p class="font-weight-bolder h2">Bliss</p>
 </a>
@@ -31,7 +33,7 @@
   <div class="container" id="collapsingNavbar">
       <ul class="navbar-nav  text-center">
           <li class="nav-item active">
-            <a href="/gallery" class="nav-link d-flex flex-column ">
+            <a href="/gallery" class="nav-link py-0 d-flex flex-column ">
               <span class="material-icons">
                 search
                 </span>  
@@ -39,7 +41,7 @@
             </a>
           </li>
           <li class="nav-item active">
-              <a class="nav-link d-flex flex-column" href="#myAlert">
+              <a class="nav-link py-0 d-flex flex-column" href="#myAlert">
                 <span class="material-icons">
                   room
                   </span>
@@ -57,7 +59,7 @@
            
       <ul class="navbar-nav text-center">
           <li class="nav-item active">
-              <a class="nav-link d-flex flex-column" href="/user" >
+              <a class="nav-link py-0 d-flex flex-column" href="/user" >
                 <span class="material-icons">
                   verified_user
                   </span>
@@ -65,7 +67,7 @@
               </a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link d-flex flex-column" (click)="logout()">
+            <a class="nav-link py-0 d-flex flex-column" (click)="logout()">
               <span class="material-icons">
                 pan_tool
                 </span>
@@ -78,30 +80,30 @@
       <ul class="navbar-nav mx-auto flex-row">
         
         <li class="nav-item active">
-            <a class="nav-link" href="/home"><p class="font-weight-bolder">HOME</p></a>
+            <a class="nav-link py-0 " href="/home"><p class="font-weight-bolder">HOME</p></a>
           </li>
-          <p class="navbar-text active font-weight-bolder"> / </p>
+          <p class="navbar-text py-0  active font-weight-bolder"> / </p>
 
           <li class="nav-item active">
-            <a class="nav-link" href="/VS"><p class="font-weight-bolder">VS</p></a>
+            <a class="nav-link py-0" href="/VS"><p class="font-weight-bolder">VS</p></a>
           </li>
-          <p class="navbar-text active font-weight-bolder"> / </p>
+          <p class="navbar-text py-0  active font-weight-bolder"> / </p>
 
         <li class="nav-item active">
-            <a class="nav-link" href="/products"><p class="font-weight-bolder">PRODUCTS</p></a>
+            <a class="nav-link py-0" href="/products"><p class="font-weight-bolder">PRODUCTS</p></a>
         </li>
-        <p class="navbar-text active font-weight-bolder "> / </p>
+        <p class="navbar-text py-0 active font-weight-bolder "> / </p>
 
         <li class="nav-item active">
-            <a class="nav-link" href="/gallery"><p class="font-weight-bolder">GALLERY</p></a>
+            <a class="nav-link py-0 " href="/gallery"><p class="font-weight-bolder">GALLERY</p></a>
         </li>
-        <p class="navbar-text active font-weight-bolder "> / </p>
+        <p class="navbar-text py-0  active font-weight-bolder"> / </p>
         <li class="nav-item active">
-            <a class="nav-link" href="/users"><p class="font-weight-bolder">USERS</p></a>
+            <a class="nav-link py-0" href="/users"><p class="font-weight-bolder">USERS</p></a>
         </li>
     </ul>
     </div>   
-</nav>
+  </nav>
 
 <!-- <nav class="navbar flex-lg-column navbar-dark bg-primary main-nav">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
