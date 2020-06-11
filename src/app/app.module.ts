@@ -49,7 +49,7 @@ import { HomeComponent } from './home';
 import { AngularMaterialModule } from './angular-material.module';
 import { ProductsComponent } from './products/products.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { GalleryComponent } from './gallery/gallery.component'
+import { GalleryComponent } from './gallery/gallery.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { VSComponent } from './vs/vs.component';
 @NgModule({
